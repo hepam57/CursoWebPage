@@ -1,0 +1,93 @@
+
+
+body{
+font-family: 'Allerta', sans-serif;
+margin: 0px;
+}
+
+.titulo
+{
+  font-size: 70px;
+  margin-bottom: 15px;
+  margin-top: 70px;
+}
+.title-a{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  margin-top: 0px;
+}
+.guitarras{
+  color:#1f313C;
+}
+
+.guitarras h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+}
+.guitarra{
+  /* overflow: hidden; */
+  border: 1px solid #1F313C;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.derecha{
+  float: right;
+  position: relative;
+  top:-127px;
+}
+
+.izquierda{
+  float: left;
+  position: relative;
+  top: 80px;
+}
+.title-b{
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.portadas{
+  background-image:url('../images/background.png');
+  color:white;
+  padding: 20px;
+}
+.portadas button{
+  margin-bottom: 70px;
+  border-radius: 8px;
+  background: #fd324e;
+}
+
+.menu{
+  font-size: 24px;
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+}
+.menu li
+{ display: inline-block;
+  margin-left: 30px;
+}
+.logotipo{
+  display: inline-block;
+}
+.contenedor{
+  width: 800px;
+  margin: auto;
+}
+.contenedor-guitarra-a{
+margin-right:  370px;
+padding-left: 20px;
+}
+
+.contenedor-guitarra-b{
+margin-left: 370px;
+padding-right: 20px;
+}
+.guitarras ol {
+  padding: 0px;
+}
+.header
+{
+  position: relative;
+}
