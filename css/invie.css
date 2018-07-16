@@ -52,7 +52,7 @@ margin: 0px;
   color:white;
   padding: 20px;
 }
-.portadas button{
+.button{
   margin-bottom: 70px;
   border-radius: 8px;
   background: #fd324e;
@@ -94,6 +94,7 @@ padding-right: 20px;
 .footer
 {
   background: #273b47;
+  padding-top: 30px;
 }
 .contacto
 {
@@ -106,22 +107,18 @@ padding-right: 20px;
   display: block;
 }
 
-.contacto a{
-  display: block;
+.info {
+  margin-top: 20px;
+}
+
+.info a{
+  display: flex;
+  flex-direction: column;
   color: white;
   text-decoration: none;
+  margin-top: 10px;
 }
-.contacto strong
-{
-  display: inline-block;
-}
-.contacto span
-{
-  display: inline-block;
-}
-.contacto .sexo {
-  display: inline-block;
-}
+
 .footer .contenedor{
   display: flex;
   justify-content: space-between;
@@ -140,12 +137,28 @@ padding-right: 20px;
 .col1{
   margin-right: 20px;
 }
-.intereses label
-{
-  font-size: 12px;
+.col2{
+  align-items: flex-start;
 }
+.col2 .button{
+  margin-top: 20px;
+}
+.intereses label
+{ display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  margin-right: 10px;
+  width: 100px
+}
+
 .formulario label,.intereses{
   margin-bottom: 10px;
+}
+
+.intereses
+{ display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .sexo{
