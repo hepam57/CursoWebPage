@@ -11,13 +11,22 @@ margin: 0px;
   margin-bottom: 15px;
   margin-top: 70px;
 }
+.titulo span{
+  text-decoration: underline;
+}
 .title-a{
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   margin-top: 0px;
 }
+.contenedor{
+  width: 800px;
+  margin: auto;
+  position: relative;
+}
 .guitarras{
   color:#1f313C;
+  margin-bottom: 80px;
 }
 
 .guitarras h2 {
@@ -41,21 +50,30 @@ margin: 0px;
 .izquierda{
   float: left;
   position: relative;
-  top: 80px;
+  top: 20px;
 }
 .title-b{
   font-size: 50px;
   margin-bottom: 20px;
 }
 .portadas{
-  background-image:url('../images/background.png');
   color:white;
   padding: 20px;
+  height: 500px;
+}
+.background{
+  background-image:url('../images/background.png');
+  background-size: cover;
 }
 .button{
   margin-bottom: 70px;
-  border-radius: 8px;
+  border-radius: 12px;
   background: #fd324e;
+  padding: 7px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  background: linear-gradient(to left, #fe344e,#ff7250);
+  text-decoration: none;
 }
 
 .menu{
@@ -71,10 +89,14 @@ margin: 0px;
 .logotipo{
   display: inline-block;
 }
-.contenedor{
-  width: 800px;
-  margin: auto;
+
+.portadas .contenedor{
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
+  height: 200px;
 }
+
 .contenedor-guitarra-a{
 margin-right:  370px;
 padding-left: 20px;
@@ -83,9 +105,15 @@ padding-left: 20px;
 .contenedor-guitarra-b{
 margin-left: 370px;
 padding-right: 20px;
+position: relative;
+bottom: 80px;
 }
 .guitarras ol {
   padding: 0px;
+}
+
+.guitarra.b{
+  height: 200px
 }
 .header
 {
@@ -94,7 +122,7 @@ padding-right: 20px;
 .footer
 {
   background: #273b47;
-  padding-top: 30px;
+  padding: 50px 10px;
 }
 .contacto
 {
@@ -119,6 +147,13 @@ padding-right: 20px;
   margin-top: 10px;
 }
 
+input,textarea{
+  outline: 0px;
+}
+input:focus,textarea:focus{
+  background: lightgray;
+}
+
 .footer .contenedor{
   display: flex;
   justify-content: space-between;
@@ -126,9 +161,8 @@ padding-right: 20px;
 
 .formulario{
   display: flex;
-  width: 482px;
+  width: 500px;
   color: white;
-  padding: 50px 10px;
 }
 .col1,.col2{
   display: flex;
@@ -147,8 +181,7 @@ padding-right: 20px;
 { display: flex;
   flex-direction: row;
   font-size: 12px;
-  margin-right: 10px;
-  width: 100px
+  width: 50%
 }
 
 .formulario label,.intereses{
@@ -157,10 +190,46 @@ padding-right: 20px;
 
 .intereses
 { display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   margin-top: 20px;
 }
 
 .sexo{
   margin-top: 10px;
+}
+table{
+  width: 100%;
+}
+th{
+  background: #273b47;
+  color:white;
+}
+
+th{
+  background: #273b47;
+  color:white;
+}
+th{
+  padding: 10px;
+}
+td{
+  padding: 20px;
+}
+table,td,th{
+  border:1px solid black;
+  border-collapse: collapse;
+}
+.tabla{
+  margin: 50px 10px;
+}
+.menu li:before{
+  content: '∘';
+  font-size: 30px;
+  color: white;
+
+}
+.menu a{
+  color: white;
+  text-decoration: none;
 }
