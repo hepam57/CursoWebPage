@@ -5,15 +5,17 @@
     <title>Invie - tus mejores guitarras!!</title>
     <link rel="stylesheet" href="css/invie.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!-- <link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet"> -->
   </head>
   <body>
-      <header id="header" class="header background">
-        <div class="contenedor">
+    <section id="portadas" class="portadas background">
+      <header id="header" class="header contenedor">
           <figure class="logotipo">   <!-- logotipo -->
             <img src="images/invie.png" width="186px" height="60px" alt="Invie logotipo">
+            <span class="icon-menu burguer_button" id="burguer_button"></span>
           </figure>
-          <nav class="menu">
+          <nav class="menu" id="menu">
             <ul>
               <li>
                 <a href="index.html">Home</a>
@@ -26,9 +28,9 @@
               </li>
             </ul>
           </nav>
-        </div>
-
       </header>
+    </section>
+
       <section class="tabla">
         <div class="contenedor">
           <table>
@@ -59,8 +61,6 @@
             </tbody>
           </table>
         </div>
-
-
       </section>
 
       <footer class="footer">
@@ -113,6 +113,20 @@
 
       </footer>
 
+      <script type="text/javascript">
+        var $burguerButton = document.getElementById('burguer_button');
+        var $menu = document.getElementById('menu');
+        // $menu.classList.add('active');
+        // $menu.classList.remove('active');
+       $burguerButton.addEventListener('touchstart',
+       function toggleMenu()
+            {
+             $menu.classList.toggle('active');
+            }
+       )
+
+
+      </script>
 
 
   </body>

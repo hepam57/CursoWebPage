@@ -5,17 +5,18 @@
     <title>Invie - tus mejores guitarras!!</title>
     <link rel="stylesheet" href="css/invie.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet"> -->
+
   </head>
   <body>
-
       <section id="portadas" class="portadas background">
-
         <header id="header" class="header contenedor">
           <figure class="logotipo">   <!-- logotipo -->
             <img src="images/invie.png" width="186px" height="60px" alt="Invie logotipo">
+            <span class="icon-menu burguer_button" id="burguer_button"></span>
           </figure>
-          <nav class="menu">
+          <nav class="menu" id="menu">
             <ul>
               <li>
                 <a href="index.html">Home</a>
@@ -29,17 +30,27 @@
             </ul>
           </nav>
         </header>
-        <div class="contenedor">
-        <h1 class="titulo">Guitarras <span>Inviesibles</span></h1>
-        <h3 class="title-a">Sé la estrella de rock que siempre quisiste ser</h3>
-        <a class="button" href='#guitarras' type="button" name="button">Conoce más</a>
+        <div class="contenedor grupo-titulos">
+          <h1 class="titulo">Guitarras <span>Inviesibles</span></h1>
+          <h3 class="title-a">Sé la estrella de rock que siempre quisiste ser</h3>
+          <a class="button" href='#guitarras' type="button" name="button">Conoce más</a>
         </div>
-      <!--portada-->
       </section>
+
+      <!--portada-->
       <section id="guitarras" class="guitarras contenedor">
+        <div class="video-content">
+          <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/j-1FrwiT3XY"
+          frameborder="0"
+          allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <!-- <video src="https://www.youtube.com/watch?v=j-1FrwiT3XY" autoplay poster="posterimage.jpg"> -->
+
+        </video>
         <h2>Nuestras guitarras</h2>
         <article class="guitarra">
-          <img src="images/invie-acustica.png" class="derecha" width="350" alt="Guitarra Invie Acustica">
+          <img data-src="images/invie-acustica.png" class="derecha" width="350" alt="Guitarra Invie Acustica">
           <div class="contenedor-guitarra-a">
             <h3 class="title-b">Invie Acustica</h3>
             <ol>
@@ -50,7 +61,7 @@
           </div>
         </article>
         <article class="guitarra b">
-          <img src="images/invie-classic.png" class="izquierda" width="350" alt="Guitarra Invie Clasica">
+          <img data-src="images/invie-classic.png" class="izquierda" width="350" alt="Guitarra Invie Clasica">
           <div class="contenedor-guitarra-b">
             <h3 class="title-b">Invie Classic</h3>
             <ol>
@@ -60,12 +71,14 @@
             </ol>
           </div>
         </article>
-      <!--guitarras-->
       </section>
+      <!--guitarras-->
+
+
       <footer class="footer">
         <div class="contenedor">
           <div class="contacto">
-            <img src="images/invie-white.png" alt="logotipo blanco">
+            <img data-src="images/invie-white.png" alt="logotipo blanco">
             <div class="info">
               <a href="tel:+573057671931"><strong>Telefono </strong><span>3112629058</span></a>
               <a href="mailto:hepam_57@hotmail.com"><strong>Email </strong><span>hepam_57@hotmail.com</span></a>
@@ -103,7 +116,8 @@
             </div>
             <div class="col2">
               <label for="comentariosTA">Comentarios</label>
-              <textarea name="comentarios" id="comentariosTA" rows="7" cols="30"></textarea>
+              <textarea name="comentarios" id="comentariosTA"
+              rows="7"></textarea>
               <input class="button" type="submit" value="Enviar">
             </div>
           </form>
@@ -111,8 +125,43 @@
         </div>
 
       </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js">
 
+</script>
+ <script type="text/javascript">
+   var $burguerButton = document.getElementById('burguer_button');
+   var $menu = document.getElementById('menu');
+   // $menu.classList.add('active');
+   // $menu.classList.remove('active');
 
+function toggleMenu()
+     {
+      $menu.classList.toggle('active');
+      $burguerButton.classList.toggle('icon-menu');
+      $burguerButton.classList.toggle('icon-cancel');
+     }
+$burguerButton.addEventListener('touchstart',toggleMenu);
+var consulta = window.matchMedia('(max-width: 500px)');
+
+function mediaQuery()
+{console.log("sisds");
+  if (consulta.matches) {
+    console.log("si");
+    $burguerButton.style.display= "inline-block";
+  }else {
+    // $burguerButton.removeEventListener('touchstart',toggleMenu);
+    console.log("no");
+    $burguerButton.style.display= "none";
+  }
+}
+mediaQuery();
+consulta.addListener(mediaQuery);
+var bLazy = new Blazy({
+   selector: 'img'
+    // options
+});
+
+ </script>
 
   </body>
 </html>
