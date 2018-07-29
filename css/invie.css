@@ -141,6 +141,7 @@ flex-direction: column;
   text-decoration: none;
 }
 .guitarras{
+  flex:1;
   height: auto;
   color:#1f313C;
   margin-bottom: 80px;
@@ -376,6 +377,10 @@ text-align: center;
 .guitarra ol{
   list-style: none;
   padding: 0;
+}
+
+.tabla .contenedor{
+  overflow: auto;
 }
 }
 

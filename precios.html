@@ -39,6 +39,9 @@
                 <th>Modelo</th>
                 <th>Precio</th>
                 <th>Descripción</th>
+                <th>Modelo</th>
+                <th>Precio</th>
+                <th>Descripción</th>
               </tr>
             </thead>
             <tbody>
@@ -46,14 +49,23 @@
                 <td>Invie Classic</td>
                 <td>$10000</td>
                 <td>La guitarra mas pro de todas</td>
+                <td>Invie Classic</td>
+                <td>$10000</td>
+                <td>La guitarra mas pro de todas</td>
               </tr>
               <tr>
+                <td>Invie Classic</td>
+                <td>$10000</td>
+                <td>La guitarra mas pro de todas</td>
                 <td>Invie Classic</td>
                 <td>$10000</td>
                 <td>La guitarra mas pro de todas</td>
               </tr>
 
               <tr>
+                <td>Invie Classic</td>
+                <td>$10000</td>
+                <td>La guitarra mas pro de todas</td>
                 <td>Invie Classic</td>
                 <td>$10000</td>
                 <td>La guitarra mas pro de todas</td>
@@ -113,20 +125,43 @@
 
       </footer>
 
-      <script type="text/javascript">
-        var $burguerButton = document.getElementById('burguer_button');
-        var $menu = document.getElementById('menu');
-        // $menu.classList.add('active');
-        // $menu.classList.remove('active');
-       $burguerButton.addEventListener('touchstart',
-       function toggleMenu()
-            {
-             $menu.classList.toggle('active');
-            }
-       )
-
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js">
 
       </script>
+       <script type="text/javascript">
+         var $burguerButton = document.getElementById('burguer_button');
+         var $menu = document.getElementById('menu');
+         // $menu.classList.add('active');
+         // $menu.classList.remove('active');
+
+      function toggleMenu()
+           {
+            $menu.classList.toggle('active');
+            $burguerButton.classList.toggle('icon-menu');
+            $burguerButton.classList.toggle('icon-cancel');
+           }
+      $burguerButton.addEventListener('touchstart',toggleMenu);
+      var consulta = window.matchMedia('(max-width: 500px)');
+
+      function mediaQuery()
+      {console.log("sisds");
+        if (consulta.matches) {
+          console.log("si");
+          $burguerButton.style.display= "inline-block";
+        }else {
+          // $burguerButton.removeEventListener('touchstart',toggleMenu);
+          console.log("no");
+          $burguerButton.style.display= "none";
+        }
+      }
+      mediaQuery();
+      consulta.addListener(mediaQuery);
+      var bLazy = new Blazy({
+         selector: 'img'
+          // options
+      });
+
+       </script>
 
 
   </body>
