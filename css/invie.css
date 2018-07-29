@@ -64,6 +64,7 @@ flex-direction: column;
   color: white;
 }
 .background{
+  background-color: #466173;
   background-image:url('../images/background.png');
   background-size: cover;
 }
@@ -506,10 +507,10 @@ input[type="checkbox"]{
   .grupo-titulos{
     align-items: center;
   }
-  .background{
+  /* .background{
     background-image:url('../images/background_movil.png');
     background-size: cover;
-  }
+  } */
 
   .izquierda, .derecha{
     width: 200px;
@@ -538,4 +539,12 @@ iframe{
   bottom: 0;
   width: 100%;
   height: 100%;
+}
+
+@media screen and(-webkit-min-device-pixel-ratio:2)
+{
+  .background{
+    background-image:url('../images/background2x.png');
+    background-size: cover;
+  }
 }
