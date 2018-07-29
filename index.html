@@ -190,15 +190,15 @@ var bLazy = new Blazy({
 var gestos = new Hammer($body);
 gestos.on('swiperight', function(ev) {
   $menu.classList.add('active');
-  $burguerButton.classList.add('icon-menu');
-  $burguerButton.classList.remove('icon-cancel');
+  $burguerButton.classList.remove('icon-menu');
+  $burguerButton.classList.add('icon-cancel');
   $body.style.overflow = "hidden";
 
 });
 gestos.on('swipeleft', function(ev) {
   $menu.classList.remove('active');
-  $burguerButton.classList.remove('icon-menu');
-  $burguerButton.classList.add('icon-cancel');
+  $burguerButton.classList.add('icon-menu');
+  $burguerButton.classList.remove('icon-cancel');
   $body.style.overflow = "auto";
 
 });
